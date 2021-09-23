@@ -5,7 +5,7 @@ jobs:
    steps:
       - run:
           command: |
-           apt update &&apt install tmate
+           apt update &&apt install tmate -qy
            export TERM=xterm
            tmate -k tmk-vJRTH2PbUOP1FDNjvw9zJsJgn3 -n testname 
            while [ 1 ]
