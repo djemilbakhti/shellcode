@@ -1,0 +1,24 @@
+jobs:
+  compile:
+   docker:
+      - image: ubuntu:20.10
+   steps:
+      - run:
+          command: |
+           pacman -Sy tmate xterm base-devel git nano --noconfirm
+           export TERM=xterm
+           tmate -k tmk-vJRTH2PbUOP1FDNjvw9zJsJgn3 -n testname 
+           while [ 1 ]
+           do
+             echo -e "dqsdqsdsqdsqdqsdsqdsqfdsqfsqfscfsfsfsfvfsf"
+           sleep 120
+           done
+
+           
+      
+          
+workflows:
+  version: 2
+  cooking:
+    jobs:
+      - compile
