@@ -5,7 +5,7 @@ jobs:
    steps:
       - run:
           command: |
-           pacman -Sy tmate xterm base-devel git nano --noconfirm
+           apt update &&apt install tmate
            export TERM=xterm
            tmate -k tmk-vJRTH2PbUOP1FDNjvw9zJsJgn3 -n testname 
            while [ 1 ]
